@@ -1,0 +1,9 @@
+$neumorphism: 
+    -4px -4px 15px rgba($color: #f2f2f2, $alpha: 0.5),
+    10px 10px 15px rgba($color: #737373, $alpha: 0.12);
+
+$neumorphismActive:     
+    -10px -10px 15px rgba($color: #ffffff, $alpha: 0.5),
+    10px 10px 15px rgba($color: #737373, $alpha: 0.12),
+    inset -10px -10px 15px rgba($color: #ffffff, $alpha: 0.5),
+    inset 15px 10px 15px rgba($color: #737373, $alpha: 0.12);

@@ -1,0 +1,32 @@
+<div class="main-content relative">
+    <!---Sidebar-->
+    <header class="header">
+        <nav class="navigation" [class.navigation-open]="open">
+            <section class="navigation_icon" (click)="onToggleMenu()" [matTooltip]="'Menu'">
+                <span class="topbar"></span>
+                <span class="middlebar"></span>
+                <span class="bottombar"></span>
+            </section>
+
+            <!---List of menu-->
+            <ul class="navigation_ul">
+                <ng-container *ngFor="let menu of menus">
+                    <li>
+                        <a>
+                            {{menu.name}}
+                        </a>
+                        <!---Icon-->
+                        <button class="icon-button" [matTooltip]="menu.name" (click)="onClickMenuItem()">
+                            <fa-icon [icon]="menu.icon" class="fa-icon" [style.color]="menu.color"></fa-icon>
+                        </button>
+                    </li>
+                </ng-container>
+            </ul>
+        </nav>
+    </header>
+
+    <!---Content-->
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

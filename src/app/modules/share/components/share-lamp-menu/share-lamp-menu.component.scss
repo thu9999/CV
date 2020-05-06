@@ -1,0 +1,26 @@
+.lamp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lamp-button {
+    display: block;
+    width: 86px;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transition: all .3s;
+}
+
+.lamp-button:focus {
+    outline: none;
+}
+
+.lamp-button:hover {
+    color: #f99f5b;
+}

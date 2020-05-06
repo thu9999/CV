@@ -1,0 +1,12 @@
+<div class="lamp-container">
+    <button 
+        (click)="onLampClick()" 
+        class="lamp-button" 
+        mat-raised-button 
+        [style.color]="on ? '#f99f5b' : '#A0AEC0'"
+        [class.lamp-button-on]="on"
+    >
+        {{menuTitle}}
+    </button>
+    <div #lamp></div>
+</div>
