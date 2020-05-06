@@ -1,4 +1,4 @@
-<div class="main-content relative">
+<div class="main-content relative" [ngClass]="(mode$ | async) ? 'dark-mode': 'light-mode'">
     <!---Sidebar-->
     <header class="header">
         <nav class="navigation" [class.navigation-open]="open">
@@ -27,6 +27,16 @@
 
     <!---Content-->
     <div class="content">
+        <!---Lamps-->
+        <app-lamps></app-lamps>
+
+        <!---Main content-->
         <router-outlet></router-outlet>
     </div>
+
+    <button class="mode-button" (click)="changeMode(mode$)">
+        <mat-icon [style.color]="(mode$ | async) ? '#ED8936' : '#0c1427'">{{(mode$ | async) ? 'wb_incandescent' : 'brightness_3'}}</mat-icon>
+    </button>
 </div>
+
+

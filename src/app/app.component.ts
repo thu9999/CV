@@ -1,6 +1,8 @@
-import { Component, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
-import { faHome, faPowerOff, faBell, faUser, faCog } from '@fortawesome/free-solid-svg-icons';
-
+import { Component, ChangeDetectorRef, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { faHome, faUser, faMedal, faQuestion, faCogs } from '@fortawesome/free-solid-svg-icons';
+import { Observable, Subscription } from 'rxjs';
+import { CommonService } from './modules/share/services/common.service';
+import { scan, tap } from 'rxjs/operators';
 export interface Menu {
     name: string 
     link: string
@@ -14,18 +16,26 @@ export interface Menu {
     styleUrls: ['./app.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
     open: boolean = false;
+    mode$: Observable<boolean>;
+    subscription: Subscription;
     menus: Menu[] = [
-        { name: 'Dashboard', link: 'dashboard', icon: faHome, color: '#48CFAD' },
-        { name: 'Notifications', link: 'notifications', icon: faBell, color: '#ED5565' },
-        { name: 'Account', link: 'accountacc', icon: faUser, color: '#805AD5' },
-        { name: 'Settings', link: 'accountacc', icon: faCog, color: '#4FC1E9' },
-        { name: 'Logout', link: 'logout', icon: faPowerOff, color: '#A0D468' }
+        { name: 'Home', link: 'home', icon: faHome, color: '#48CFAD' },
+        { name: 'Information', link: 'information', icon: faUser, color: '#4FC1E9' },
+        { name: 'Experiences', link: 'experiences', icon: faMedal, color: '#ED5565' },
+        { name: 'Skills', link: 'skills', icon: faCogs, color: '#805AD5' },
+        { name: 'About', link: 'about', icon: faQuestion, color: '#4FC1E9' }
     ];
     constructor(
-        private _cdRef: ChangeDetectorRef
-    ) {}
+        private _cdRef: ChangeDetectorRef,
+        private _commonService: CommonService
+    ) {
+        this.mode$ = this._commonService.onSource.asObservable();
+    }
+
+    ngOnDestroy() {
+    }
 
     /**
      * Toggle menu
@@ -41,5 +51,13 @@ export class AppComponent {
     onClickMenuItem() {
         this.open = false;
         this._cdRef.detectChanges();
+    }
+
+    /**
+     * Change mode
+     */
+    changeMode(e) {
+        const currentValue = this._commonService.onSource.value;
+        this._commonService.onSource.next(!currentValue);
     }
 }

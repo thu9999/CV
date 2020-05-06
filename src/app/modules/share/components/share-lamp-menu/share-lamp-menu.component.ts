@@ -10,7 +10,8 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
     @ViewChild('lamp', { static: true }) lampElementRef: ElementRef;
     @Input() on: boolean = false;
     @Input() height: number;
-    @Input() menuTitle: string;
+    @Input() delay: number;
+    //@Input() menuTitle: string;
     @Output() lampEvent = new EventEmitter();
     constructor(
         private _renderer: Renderer2
@@ -24,7 +25,7 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
             this._renderer.removeChild(lamp, child);
         }
 
-        this._renderer.appendChild(lamp, this.drawLamp(this.on, this.height));
+        this._renderer.appendChild(lamp, this.drawLamp(this.on, this.height, this.delay));
     }
 
     ngOnInit(): void {
@@ -34,7 +35,7 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
         this.lampEvent.emit()
     }
 
-    drawLamp(on: boolean, height: number) {
+    drawLamp(on: boolean, height: number, delay: number) {
         const self = this;
         const div= document.createElement('div');
         const innerWidth = 120;

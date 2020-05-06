@@ -1,0 +1,9 @@
+<div class="flex flex-row justify-between">
+    <ng-container *ngFor="let lamp of lamps">
+        <app-share-lamp-menu
+            [on]="on$ | async"
+            [height]="lamp.height"
+            [delay]="lamp.delay"
+        ></app-share-lamp-menu>
+    </ng-container>
+</div>

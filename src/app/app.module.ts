@@ -5,21 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShareModule } from './modules/share/share.module';
-
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { OverviewComponent } from './components/overview/overview.component';
-import { AreaComponent } from './components/area/area.component';
-import { ChartsComponent } from './components/charts/charts.component';
-import { CardsComponent } from './components/cards/cards.component';
+import { HomeComponent } from './components/home/home.component';
+import { InformationComponent } from './components/information/information.component';
+import { ExperiencesComponent } from './components/experiences/experiences.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { AboutComponent } from './components/about/about.component';
+import { LampsComponent } from './components/lamps/lamps.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        DashboardComponent,
-        OverviewComponent,
-        AreaComponent,
-        ChartsComponent,
-        CardsComponent
+        HomeComponent,
+        InformationComponent,
+        ExperiencesComponent,
+        SkillsComponent,
+        AboutComponent,
+        LampsComponent
     ],
     imports: [
         BrowserModule,
