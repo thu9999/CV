@@ -16,7 +16,7 @@
                             {{menu.name}}
                         </a>
                         <!---Icon-->
-                        <button class="icon-button" [matTooltip]="menu.name" (click)="onClickMenuItem()">
+                        <button class="icon-button" [routerLink]="menu.link" [matTooltip]="menu.name" (click)="onClickMenuItem()">
                             <fa-icon [icon]="menu.icon" class="fa-icon" [style.color]="menu.color"></fa-icon>
                         </button>
                     </li>
@@ -34,7 +34,7 @@
         <router-outlet></router-outlet>
     </div>
 
-    <button class="mode-button" (click)="changeMode(mode$)">
+    <button class="mode-button" (click)="changeMode(mode$)" [matTooltip]="(mode$ | async) ? 'Light mode' : 'Dark mode'">
         <mat-icon [style.color]="(mode$ | async) ? '#ED8936' : '#0c1427'">{{(mode$ | async) ? 'wb_incandescent' : 'brightness_3'}}</mat-icon>
     </button>
 </div>

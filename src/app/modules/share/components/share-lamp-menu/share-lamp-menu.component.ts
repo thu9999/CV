@@ -44,6 +44,21 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
             .attr('width', innerWidth)
             .attr('height', innerHeight);
 
+        //Container for the gradients
+        var defs = lampContainer.append("defs");
+
+        //Filter for the outside glow
+        var filter = defs.append("filter")
+            .attr("id","glow");
+        filter.append("feGaussianBlur")
+            .attr("stdDeviation","3.5")
+            .attr("result","coloredBlur");
+        var feMerge = filter.append("feMerge");
+        feMerge.append("feMergeNode")
+            .attr("in","coloredBlur");
+        feMerge.append("feMergeNode")
+            .attr("in","SourceGraphic");
+
         const lampGroup = lampContainer.append('g')
             .attr('transform', `translate(${innerWidth / 2}, 0)`);
 
@@ -124,6 +139,9 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
                     bulbRoot.transition()
                         .duration(200)
                         .attr('fill', lightOnColor)
+                        .style("filter", "url(#glow)");
+                        
+
                 })
         }
 
