@@ -1,1 +1,83 @@
-<p>information works!</p>
+<div class="flex justify-center items-center">
+    <div class="bg-white relative card-container shadow-2xl">
+        <div class="background-image">
+           
+        </div>
+
+        <!---Content-->
+        <div class="content grid grid-cols-3">
+            <!---Avatar-->
+            <div class="col-span-1 flex flex-col justify-center">
+                <div class="flex justify-center"><img src="./../../../assets/images/avatar.jpg" class="avatar" /></div>
+                <div class="uppercase font-semibold text-gray-600 tracking-wide text-center text-xl card-name pt-4">Tran huu thu</div>
+                <div class="pt-2 text-gray-500 text-center tracking-wide pt-2">Web Developer</div>
+                <div class="flex justify-center"><hr class="horizontal"/></div>
+                
+                <div class="flex flex-row justify-center items-center mt-4">
+                    <!---Social icon-->
+                    <ng-container *ngFor="let social of socials">
+                        <app-social-icon
+                            [icon]="social.icon"
+                            [link]="social.link"
+                        ></app-social-icon>
+                    </ng-container>
+                </div>
+            </div>
+
+            <!---Infor-->
+            <div class="col-span-2 px-4 py-8">
+                <div class="infor-container px-2 py-4">
+                    <!---First name-->
+                    <div class="grid grid-cols-6 mb-4">
+                        <div class="col-span-1 flex justify-end items-center text-gray-500 font-semibold pr-4">First name </div>
+                        <div class="col-span-5 px-4 uppercase font-semibold text-gray-600 text-lg neumorphism">Thu</div>
+                    </div>
+
+                    <!---Last name-->
+                    <div class="grid grid-cols-6 mb-4">
+                        <div class="col-span-1 flex justify-end items-center text-gray-500 font-semibold pr-4">Last name </div>
+                        <div class="col-span-5 px-4 uppercase font-semibold text-gray-600 text-lg neumorphism">Tran Huu</div>
+                    </div>
+
+                    <!---Phone-->
+                    <div class="grid grid-cols-6 mb-4">
+                        <div class="col-span-1 flex items-center justify-end pr-4">
+                            <fa-icon [icon]="faPhone" class="text-md text-green-600"></fa-icon>
+                        </div>
+                        <div class="col-span-5 flex justify-start items-center flex-row">
+                            <div class="number">+</div>
+                            <div class="number">8</div>
+                            <div class="number">4</div>
+                            <div class="number">9</div>
+                            <div class="number">7</div>
+                            <div class="number">3</div>
+                            <div class="number">9</div>
+                            <div class="number">6</div>
+                            <div class="number">8</div>
+                            <div class="number">5</div>
+                            <div class="number">2</div>
+                            <div class="number">8</div>
+                        </div>
+                    </div>
+
+                    <!---Email-->
+                    <div class="grid grid-cols-6 mb-4">
+                        <div class="col-span-1 flex items-center justify-end pr-4">
+                            <fa-icon [icon]="faEnvelope" class="text-md text-red-600"></fa-icon>
+                        </div>
+                        <div class="col-span-5 px-4 font-semibold tracking-wide text-gray-600 neumorphism">Tranhuuthu991990@gmail.com</div>
+                    </div>
+
+                    <!---Last name-->
+                    <div class="grid grid-cols-6 mb-4">
+                        <div class="col-span-1 flex items-center justify-end pr-4">
+                            <fa-icon [icon]="faMapMarkerAlt" class="text-md text-teal-600"></fa-icon>
+                        </div>
+                        <div class="col-span-5 px-4 font-semibold tracking-wide text-gray-600 neumorphism">District 3, HCMC</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

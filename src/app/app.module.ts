@@ -11,6 +11,7 @@ import { ExperiencesComponent } from './components/experiences/experiences.compo
 import { SkillsComponent } from './components/skills/skills.component';
 import { AboutComponent } from './components/about/about.component';
 import { LampsComponent } from './components/lamps/lamps.component';
+import { SocialIconComponent } from './components/social-icon/social-icon.component';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { LampsComponent } from './components/lamps/lamps.component';
         ExperiencesComponent,
         SkillsComponent,
         AboutComponent,
-        LampsComponent
+        LampsComponent,
+        SocialIconComponent
     ],
     imports: [
         BrowserModule,
