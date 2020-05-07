@@ -13,6 +13,7 @@ import { AboutComponent } from './components/about/about.component';
 import { LampsComponent } from './components/lamps/lamps.component';
 import { SocialIconComponent } from './components/social-icon/social-icon.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { ProjectComponent } from './components/project/project.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
         AboutComponent,
         LampsComponent,
         SocialIconComponent,
-        ExperienceComponent
+        ExperienceComponent,
+        ProjectComponent
     ],
     imports: [
         BrowserModule,

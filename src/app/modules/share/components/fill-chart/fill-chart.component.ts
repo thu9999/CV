@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, OnChanges, Renderer2, Input } from '@angular/core';
 import * as d3 from 'd3';
+import { Observable } from 'rxjs';
+import { CommonService } from '../../services/common.service';
 
 export interface Options {
     title: string
@@ -14,11 +16,15 @@ export interface Options {
 })
 export class FillChartComponent implements OnChanges, OnInit {
     @ViewChild('container', { static: true }) container: ElementRef;
+    mode$: Observable<boolean>;
     @Input() data: number;
     @Input() options: Options;
     constructor(
-        private _renderer: Renderer2
-    ) { }
+        private _renderer: Renderer2,
+        private _commonService: CommonService
+    ) { 
+        this.mode$ = this._commonService.onSource.asObservable();
+    }
 
     ngOnChanges() {
         const nativeElement = this.container.nativeElement;

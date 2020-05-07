@@ -8,7 +8,7 @@
         <div class="time font-semibold text-md text-orange-400">{{experience.time}}</div>
     
         <!---points-->
-        <div class="point">
+        <div class="point" [ngClass]="(mode$ | async) ? 'point-dark' : 'point-light'">
             <fa-icon [icon]="faCheck" *ngIf="!active" class="text-gray-500"></fa-icon>
             <div class="active-timeline" *ngIf="active"></div>
         </div>

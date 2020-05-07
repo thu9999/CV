@@ -126,7 +126,7 @@ export class SkillsComponent implements OnInit {
                 color: '#64ECED' 
             }
         }
-    ]
+    ];
     constructor() { }
 
     ngOnInit(): void {
