@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { faPhone, faEnvelope, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope, faMapMarkerAlt, faUniversity } from '@fortawesome/free-solid-svg-icons';
 
 
 export interface Social {
@@ -17,6 +17,7 @@ export class InformationComponent implements OnInit {
     faPhone = faPhone;
     faEnvelope = faEnvelope;
     faMapMarkerAlt = faMapMarkerAlt;
+    faUniversity = faUniversity;
     socials: Social[] = [
         { icon: 'fa fa-linkedin', link: 'https://www.linkedin.com/in/jack-tr%E1%BA%A7n-7549a0192/'},
         { icon: 'fa fa-facebook', link: 'https://www.facebook.com/tranhuuthu991990'},

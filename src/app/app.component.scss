@@ -27,7 +27,7 @@ $headerWidth: 80px;
 }
 
 .dark-mode {
-    background-color: #0c1427;
+    background-color: $dark;
 }
 
 .header {
@@ -207,11 +207,14 @@ $headerWidth: 80px;
     height: 48px;
     border: none;
     outline: none;
-    box-shadow: $neumorphismActive;
     background-color: #ffffff;
     cursor: pointer;
     transition: all 0.2s;
     border-radius: 50%;
+}
+
+.icon-button {
+    box-shadow: $neumorphismActive;
 }
 
 .icon-button:focus,
@@ -229,4 +232,5 @@ $headerWidth: 80px;
     top: 50%;
     transform: translateY(-50%);
     right: 10px;
+    box-shadow: $neumorphism;
 }

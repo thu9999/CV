@@ -1,1 +1,10 @@
-<p>skills works!</p>
+<div class="flex justify-center">
+    <div class="skills-content">
+        <ng-container *ngFor="let skill of skills">
+            <app-fill-chart
+                [data]="skill.data"
+                [options]="skill.options"
+            ></app-fill-chart>
+        </ng-container>
+    </div>    
+</div>

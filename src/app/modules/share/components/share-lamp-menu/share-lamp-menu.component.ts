@@ -45,19 +45,21 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
             .attr('height', innerHeight);
 
         //Container for the gradients
-        var defs = lampContainer.append("defs");
+        var defs = lampContainer.append('defs');
 
         //Filter for the outside glow
-        var filter = defs.append("filter")
-            .attr("id","glow");
-        filter.append("feGaussianBlur")
-            .attr("stdDeviation","3.5")
-            .attr("result","coloredBlur");
-        var feMerge = filter.append("feMerge");
-        feMerge.append("feMergeNode")
-            .attr("in","coloredBlur");
-        feMerge.append("feMergeNode")
-            .attr("in","SourceGraphic");
+        var filter = defs.append('filter')
+            .attr('id','glow');
+        filter.append('feGaussianBlur')
+            .attr('stdDeviation','3.5')
+            .attr('dx', 10)
+            .attr('dy', 10)
+            .attr('result','coloredBlur');
+        var feMerge = filter.append('feMerge');
+        feMerge.append('feMergeNode')
+            .attr('in','coloredBlur');
+        feMerge.append('feMergeNode')
+            .attr('in','SourceGraphic');
 
         const lampGroup = lampContainer.append('g')
             .attr('transform', `translate(${innerWidth / 2}, 0)`);
@@ -112,6 +114,12 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
             .delay(1000)
             .duration(1000)
             .attr('fill', lightColor)
+            .on('end', function() {
+                const currentLight = d3.select(this);
+                if(on) {
+                    currentLight.style("filter", "url(#glow)");
+                }
+            })
 
         // Bulb
         const bulb = lampGroup.append('g')
@@ -138,10 +146,7 @@ export class ShareLampMenuComponent implements OnChanges, OnInit {
                     wire.remove();
                     bulbRoot.transition()
                         .duration(200)
-                        .attr('fill', lightOnColor)
-                        .style("filter", "url(#glow)");
-                        
-
+                        .attr('fill', lightOnColor);
                 })
         }
 

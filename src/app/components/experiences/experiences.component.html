@@ -1,1 +1,12 @@
-<p>experiences works!</p>
+<div class="flex justify-center items-center">
+    <div class="experience-container text-white">
+        <ng-container *ngFor="let experience of experiences; let i = index;">
+            <app-experience
+                [experience]="experience"
+                [left]="i %2 === 0"
+                [active]="i === 0"
+                [last]="i === experiences.length - 1"
+            ></app-experience>
+        </ng-container>
+    </div>
+</div>

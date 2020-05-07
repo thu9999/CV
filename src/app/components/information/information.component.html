@@ -5,11 +5,11 @@
         </div>
 
         <!---Content-->
-        <div class="content grid grid-cols-3">
+        <div class="content grid grid-cols-1 md:grid-cols-3 bg-gray-200">
             <!---Avatar-->
-            <div class="col-span-1 flex flex-col justify-center">
-                <div class="flex justify-center"><img src="./../../../assets/images/avatar.jpg" class="avatar" /></div>
-                <div class="uppercase font-semibold text-gray-600 tracking-wide text-center text-xl card-name pt-4">Tran huu thu</div>
+            <div class="col-span-1 flex flex-col justify-center relative">
+                <img src="./../../../assets/images/avatar.png" class="avatar" />
+                <div class="uppercase font-semibold text-gray-600 tracking-wide text-center text-xl card-name mt-24 md:mt-0">Tran huu thu</div>
                 <div class="pt-2 text-gray-500 text-center tracking-wide pt-2">Web Developer</div>
                 <div class="flex justify-center"><hr class="horizontal"/></div>
                 
@@ -45,9 +45,7 @@
                             <fa-icon [icon]="faPhone" class="text-md text-green-600"></fa-icon>
                         </div>
                         <div class="col-span-5 flex justify-start items-center flex-row">
-                            <div class="number">+</div>
-                            <div class="number">8</div>
-                            <div class="number">4</div>
+                            <div class="number">0</div>
                             <div class="number">9</div>
                             <div class="number">7</div>
                             <div class="number">3</div>
@@ -68,12 +66,20 @@
                         <div class="col-span-5 px-4 font-semibold tracking-wide text-gray-600 neumorphism">Tranhuuthu991990@gmail.com</div>
                     </div>
 
-                    <!---Last name-->
+                    <!---Location-->
                     <div class="grid grid-cols-6 mb-4">
                         <div class="col-span-1 flex items-center justify-end pr-4">
                             <fa-icon [icon]="faMapMarkerAlt" class="text-md text-teal-600"></fa-icon>
                         </div>
                         <div class="col-span-5 px-4 font-semibold tracking-wide text-gray-600 neumorphism">District 3, HCMC</div>
+                    </div>
+
+                    <!---Education-->
+                    <div class="grid grid-cols-6 mb-4">
+                        <div class="col-span-1 flex items-center justify-end pr-4">
+                            <fa-icon [icon]="faUniversity" class="text-md text-pink-600"></fa-icon>
+                        </div>
+                        <div class="col-span-5 px-4 font-semibold tracking-wide text-gray-600 neumorphism">Hanoi'university of Science and technologies. 2008 - 2013</div>
                     </div>
                 </div>
 
