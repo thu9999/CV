@@ -12,9 +12,10 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 
 // Font awsome 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FillChartComponent } from './components/fill-chart/fill-chart.component';
 
 @NgModule({
-    declarations: [ShareLampMenuComponent],
+    declarations: [ShareLampMenuComponent, FillChartComponent],
     imports: [
         CommonModule
     ],
@@ -26,7 +27,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         // Ant design
         NzIconModule,
         FontAwesomeModule,
-        ShareLampMenuComponent
+        ShareLampMenuComponent,
+        FillChartComponent
     ]
 })
 export class ShareModule { }

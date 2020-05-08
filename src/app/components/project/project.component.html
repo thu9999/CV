@@ -1,0 +1,16 @@
+<div class="project-card m-4">
+    <!---icon-->
+    <div class="icon-container">
+        <fa-icon [icon]="project.icon" class="icon" [style.color]="project.color"></fa-icon>
+    </div>
+
+    <!---Titlte-->
+    <div class="title">{{project.title}}</div>
+
+    <!---Description-->
+    <div>
+        <ng-container *ngFor="let tech of project.technologies">
+            <div>{{tech}}</div>
+        </ng-container>
+    </div>
+</div>

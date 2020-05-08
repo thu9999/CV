@@ -2,7 +2,6 @@ import { Component, ChangeDetectorRef, ChangeDetectionStrategy, OnDestroy } from
 import { faHome, faUser, faMedal, faQuestion, faCogs } from '@fortawesome/free-solid-svg-icons';
 import { Observable, Subscription } from 'rxjs';
 import { CommonService } from './modules/share/services/common.service';
-import { scan, tap } from 'rxjs/operators';
 export interface Menu {
     name: string 
     link: string

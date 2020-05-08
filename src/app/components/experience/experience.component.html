@@ -1,0 +1,27 @@
+<div class="flex justify-center">
+    <div class="relative">
+        <!---Timeline -->
+        <div class="timeline" *ngIf="!last">
+        </div>
+    
+        <!--Time-->
+        <div class="time font-semibold text-md text-orange-400">{{experience.time}}</div>
+    
+        <!---points-->
+        <div class="point" [ngClass]="(mode$ | async) ? 'point-dark' : 'point-light'">
+            <fa-icon [icon]="faCheck" *ngIf="!active" class="text-gray-500"></fa-icon>
+            <div class="active-timeline" *ngIf="active"></div>
+        </div>
+    
+        <!---Content-->
+        <div class="content">
+            <p class="uppercase text-base text-teal-600 tracking-wide font-semibold">{{experience.title}}</p>
+            <ng-container *ngFor="let des of experience.descriptions">
+                <div class="flex flex-row">
+                    <fa-icon [icon]="faBookmark" class="text-red-600"></fa-icon>
+                    <p class="tracking-wide font-semibold pl-4" [ngClass]="(mode$ | async) ? 'text-gray-400' : 'text-gray-600'">{{des}}</p>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
