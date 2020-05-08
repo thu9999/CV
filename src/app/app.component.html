@@ -31,7 +31,9 @@
         <app-lamps></app-lamps>
 
         <!---Main content-->
-        <router-outlet></router-outlet>
+        <div [@routeAnimations]="prepareRoute(outlet)" class="main">
+            <router-outlet #outlet="outlet"></router-outlet>
+        </div>
     </div>
 
     <button class="mode-button" (click)="changeMode(mode$)" [matTooltip]="(mode$ | async) ? 'Light mode' : 'Dark mode'">

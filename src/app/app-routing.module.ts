@@ -10,23 +10,38 @@ import { AboutComponent } from './components/about/about.component';
 const routes: Routes = [
     {
         path: 'home',
-        component: HomeComponent
+        component: HomeComponent,
+        data: {
+            animation: 'isRight'
+        }
     },
     {
         path: 'information',
-        component: InformationComponent
+        component: InformationComponent,
+        data: {
+            animation: 'isRight'
+        }
     },
     {
         path: 'experiences',
-        component: ExperiencesComponent
+        component: ExperiencesComponent,
+        data: {
+            animation: 'isRight'
+        }
     },
     {
         path: 'skills',
-        component: SkillsComponent
+        component: SkillsComponent,
+        data: {
+            animation: 'isLeft'
+        }
     },
     {
         path: 'about',
-        component: AboutComponent
+        component: AboutComponent,
+        data: {
+            animation: 'isLeft'
+        }
     },
     {
         path: '',
