@@ -12,35 +12,35 @@ const routes: Routes = [
         path: 'home',
         component: HomeComponent,
         data: {
-            animation: 'isRight'
+            animation: 'homePage'
         }
     },
     {
         path: 'information',
         component: InformationComponent,
         data: {
-            animation: 'isRight'
+            animation: 'informationPage'
         }
     },
     {
         path: 'experiences',
         component: ExperiencesComponent,
         data: {
-            animation: 'isRight'
+            animation: 'experiencesPage'
         }
     },
     {
         path: 'skills',
         component: SkillsComponent,
         data: {
-            animation: 'isLeft'
+            animation: 'skillsPage'
         }
     },
     {
         path: 'about',
         component: AboutComponent,
         data: {
-            animation: 'isLeft'
+            animation: 'aboutPage'
         }
     },
     {

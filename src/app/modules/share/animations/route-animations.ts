@@ -1,7 +1,10 @@
 import { trigger, transition, query, style, animate, group, keyframes } from '@angular/animations';
 
 export const fader = trigger('routeAnimations', [
-    transition('* => isLeft, * => isRight, isLeft => *, isRight => *', [
+    transition('* => *', [
+        style({
+            position: 'relative'
+        }),
         query(':enter, :leave', [
             style({
                 position: 'absolute',
@@ -12,7 +15,7 @@ export const fader = trigger('routeAnimations', [
             })
         ]),
         query(':enter', [
-            animate('600ms ease', 
+            animate('1000ms ease', 
             style({
                 opacity: 1,
                 transform: 'scale(1) translateY(0)'
@@ -57,13 +60,11 @@ function slideTo(direction: string) {
     ];
 };
 
-export const transformer = trigger(
-    'routeAnimations', [
+export const transformer = trigger('routeAnimations', [
         transition('* => isLeft', translateTo({ x: -100, y: -100, rotate: -720})),
         transition('* => isRight', translateTo({ x: 100, y: -100, rotate: 90})),
         transition('isRight => *', translateTo({ x: -100, y: -100, rotate: 360})),
-        transition('isLeft => *', translateTo({ x: -100, y: -100, rotate: -720})),
-        transition('* => isLeft', translateTo({ x: 100, y: -100, rotate: -360})),
+        transition('isLeft => *', translateTo({ x: -100, y: -100, rotate: -720}))
     ]
 );
 
@@ -145,4 +146,5 @@ export const stepper = trigger('routeAnimations', [
             ])
         ])
     ])
-])
+]);
+
