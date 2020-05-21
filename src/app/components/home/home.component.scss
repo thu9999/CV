@@ -10,12 +10,9 @@
 
 .home-content {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 850px;
-    height: 650px;
-    background-image: url(./../../../assets/images/bg.png);
+    //background-image: url(./../../../assets/images/bg.png);
+    background: #fff;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -9,7 +9,7 @@ import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
     {
-        path: 'home',
+        path: 'projects',
         component: HomeComponent,
         data: {
             animation: 'homePage'
@@ -45,7 +45,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'home',
+        redirectTo: 'information',
         pathMatch: 'full'
     }
 ];

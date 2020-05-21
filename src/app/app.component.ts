@@ -1,5 +1,5 @@
 import { Component, ChangeDetectorRef, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
-import { faHome, faUser, faMedal, faQuestion, faCogs } from '@fortawesome/free-solid-svg-icons';
+import { faProjectDiagram, faUser, faMedal, faQuestion, faCogs } from '@fortawesome/free-solid-svg-icons';
 import { Observable, Subscription } from 'rxjs';
 import { CommonService } from './modules/share/services/common.service';
 import { fader, transformer, slider } from './modules/share/animations/route-animations';
@@ -24,10 +24,10 @@ export class AppComponent implements OnDestroy {
     mode$: Observable<boolean>;
     subscription: Subscription;
     menus: Menu[] = [
-        { name: 'Home', link: 'home', icon: faHome, color: '#48CFAD' },
         { name: 'Information', link: 'information', icon: faUser, color: '#4FC1E9' },
         { name: 'Experiences', link: 'experiences', icon: faMedal, color: '#ED5565' },
         { name: 'Skills', link: 'skills', icon: faCogs, color: '#805AD5' },
+        { name: 'Projects', link: 'projects', icon: faProjectDiagram, color: '#48CFAD' },
         { name: 'About', link: 'about', icon: faQuestion, color: '#4FC1E9' }
     ];
     constructor(
