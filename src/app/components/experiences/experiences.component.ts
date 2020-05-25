@@ -16,7 +16,7 @@ export interface Experience {
 export class ExperiencesComponent implements OnInit {
     experiences: Experience[] = [
         {
-            time: '2018-2020', title: 'Yedda', subtitle: 'Web frontend developer', 
+            time: '2017-2020', title: 'Yedda', subtitle: 'Web frontend developer', 
             descriptions: [
                 'Maintain and support dashboard website', 
                 'Fix bugs and add new features to dashboard',
@@ -30,7 +30,7 @@ export class ExperiencesComponent implements OnInit {
             ]
         },
         {
-            time: '2017-2018', title: 'Advertnative Vietnam', subtitle: 'Web frontend developer', descriptions: ['Design advertising cards', 'Embedded advertising contents into websites']
+            time: '2016-2017', title: 'Advertnative Vietnam', subtitle: 'Web frontend developer', descriptions: ['Design advertising cards', 'Embedded advertising contents into websites']
         },
         {
             time: '2014-2016', title: 'Tek-Experts', subtitle: 'Customer supporting engineer', descriptions: ['Support HP Records manager software for European\'s customers'],

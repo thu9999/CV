@@ -15,7 +15,7 @@ export interface Skill {
 export class SkillsComponent implements OnInit {
     skills: Skill[] = [
         {
-            data: 80,
+            data: 90,
             options: {
                 title: 'Angular 2+',
                 height: 16,
@@ -39,7 +39,15 @@ export class SkillsComponent implements OnInit {
             }
         },
         {
-            data: 70,
+            data: 80,
+            options: {
+                title: 'RxJS',
+                height: 16,
+                color: '#4FC1E9'
+            }
+        },
+        {
+            data: 85,
             options: {
                 title: 'Javascript ES6',
                 height: 16,
