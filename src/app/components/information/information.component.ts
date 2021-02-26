@@ -1,6 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { faPhone, faEnvelope, faMapMarkerAlt, faUniversity } from '@fortawesome/free-solid-svg-icons';
-
 
 export interface Social {
     icon: string 
@@ -13,7 +12,7 @@ export interface Social {
     styleUrls: ['./information.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InformationComponent implements OnInit {
+export class InformationComponent {
     faPhone = faPhone;
     faEnvelope = faEnvelope;
     faMapMarkerAlt = faMapMarkerAlt;
@@ -23,10 +22,5 @@ export class InformationComponent implements OnInit {
         { icon: 'fa fa-facebook', link: 'https://www.facebook.com/tranhuuthu991990'},
         { icon: 'fa fa-google-plus', link: ''}
 
-    ]
-    constructor() { }
-
-    ngOnInit(): void {
-    }
-
+    ];
 }

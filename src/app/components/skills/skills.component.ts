@@ -121,15 +121,15 @@ export class SkillsComponent implements OnInit {
         {
             data: 70,
             options: {
-                title: 'Redux (Ngxs)',
+                title: 'Redux (Ngxs, Ngrx)',
                 height: 16,
                 color: '#FF92A9' 
             }
         },
         {
-            data: 90,
+            data: 80,
             options: {
-                title: 'Others',
+                title: 'Unit/Integration test, Git, Agile Scrum',
                 height: 16,
                 color: '#64ECED' 
             }

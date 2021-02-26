@@ -1,5 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import * as d3 from 'd3';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
     selector: 'app-home',
@@ -7,14 +6,6 @@ import * as d3 from 'd3';
     styleUrls: ['./home.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
     cards: number[] = [1,2,3,4];
-    constructor(
-    ) { }
-
-    ngOnInit(): void {
-
-    }
-
-
 }
